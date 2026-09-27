@@ -117,7 +117,7 @@
 #         writer.writeheader()
 #         writer.writerows(all_results)
 
-#     print(f"\nDone. {len(all_results)} unique videos saved to {OUTPUT_CSV}")
+#     print(f"/nDone. {len(all_results)} unique videos saved to {OUTPUT_CSV}")
 
 
 # if __name__ == "__main__":
@@ -126,8 +126,8 @@
 
 import pandas as pd
 
-df = pd.read_csv('E:/Python/farmerproject/chhattisgarh_mandi_videos.csv')
-df["publishedAt"] = pd.to_datetime(df["publishedAt"])
-df["publishedAt"] = df["publishedAt"].dt.date
-df.to_csv('E:/Python/farmerproject/chhattisgarh_mandi_videos.csv', index=False)
-print(df.head())
+df = pd.read_csv('E:/Python/farmerproject/chhattisgarhmandi.csv')
+df["published_date"] = pd.to_datetime(df["published_date"])
+
+df.to_csv('E:/Python/farmerproject/chhattisgarhmandi.csv', index=False)
+print(df.dtypes)
